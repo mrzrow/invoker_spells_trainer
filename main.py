@@ -71,8 +71,6 @@ spells_to_spheres = {spells[i]: spheres_combinations[i] for i in range(len(spell
 
 spells_queue = []
 
-print(*spells_to_spheres.items(), sep='\n')
-
 run = True
 while run:
     win.fill(bgColor)
@@ -97,7 +95,6 @@ while run:
             elif event.key == pg.K_r:
                 check_cast()
 
-    # print(combination)
     spawn_spell()
     move_spells()
 
