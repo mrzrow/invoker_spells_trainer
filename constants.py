@@ -12,3 +12,5 @@ WIDTH = 1280
 HEIGHT = 720
 
 IM_SIZE = (96, 96)
+
+VEL = 100

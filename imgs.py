@@ -17,7 +17,7 @@ blast = pg.image.load('images/invoker_deafening_blast.png').convert()
 emp = pg.image.load('images/invoker_emp.png').convert()
 forge = pg.image.load('images/invoker_forge_spirit.png').convert()
 ghost_walk = pg.image.load('images/invoker_ghost_walk.png').convert()
-ice_wall = pg.image.load('images/invoker_ghost_walk.png').convert()
+ice_wall = pg.image.load('images/invoker_ice_wall.png').convert()
 sun_strike = pg.image.load('images/invoker_sun_strike.png').convert()
 tornado = pg.image.load('images/invoker_tornado.png').convert()
 
