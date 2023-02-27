@@ -1,34 +1,11 @@
 import pygame as pg
 from constants import *
-
-pg.init()
-clock = pg.time.Clock()
-
-win = pg.display.set_mode((WIDTH, HEIGHT))
-pg.display.set_caption('Example')
-
-pg.display.flip()
-
-quas = pg.image.load('images/invoker_quas.png').convert()
-wex = pg.image.load('images/invoker_wex.png').convert()
-exort = pg.image.load('images/invoker_exort.png').convert()
-invoke = pg.image.load('images/invoker_invoke.png').convert()
-quas = pg.transform.scale(quas, IM_SIZE)
-wex = pg.transform.scale(wex, IM_SIZE)
-exort = pg.transform.scale(exort, IM_SIZE)
-invoke = pg.transform.scale(invoke, IM_SIZE)
-
-zero_rect = exort.get_rect(topleft=(WIDTH // 2, HEIGHT - IM_SIZE[1]))
-first_rect = wex.get_rect(topright=(WIDTH // 2, HEIGHT - IM_SIZE[1]))
-second_rect = quas.get_rect(topright=first_rect.topleft)
-third_rect = invoke.get_rect(topleft=zero_rect.topright)
-
-combination = '333'
-comb_cast = {'0': quas, '1': wex, '2': exort}
-comb_pos = {'0': second_rect, '1': first_rect, '2': zero_rect}
+from imgs import *
 
 
 def draw_combination(_comb):
+    comb_cast = {'0': quas, '1': wex, '2': exort}
+    comb_pos = {'0': second_rect, '1': first_rect, '2': zero_rect}
     for _i, _elem in enumerate(_comb):
         if _elem == '3':
             continue
@@ -42,6 +19,8 @@ def draw_combination(_comb):
     pg.draw.rect(win, GREY, third_rect, 4)
 
 
+combination = '333'
+clock = pg.time.Clock()
 run = True
 while run:
     win.fill(bgColor)
